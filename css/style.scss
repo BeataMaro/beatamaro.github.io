@@ -9,12 +9,36 @@ a {
   color: inferit;
 }
 
+ul {
+  list-style: none;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
 
 body {
-  background-color: black;
-  color: grey;
+  background-color: #5155bc;
+  color: rgb(207, 219, 221);
+
+  header {
+    nav {
+      width: 100%;
+      padding: 2em;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+  }
+
+  section {
+    padding: 2rem;
+  }
 }

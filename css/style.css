@@ -10,12 +10,39 @@ a {
   color: inferit;
 }
 
+ul {
+  list-style: none;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
 
 body {
-  background-color: black;
-  color: grey;
+  background-color: #5155bc;
+  color: #cfdbdd;
+}
+
+body header nav {
+  width: 100%;
+  padding: 2em;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body header h1,
+body header h2 {
+  text-align: center;
+}
+
+body section {
+  padding: 2rem;
 }
