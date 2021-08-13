@@ -216,8 +216,15 @@ body main section header {
   padding: 1rem 0;
 }
 
+body main section header h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 1rem;
+}
+
 body main section p {
   line-height: 1.6;
+  letter-spacing: 1px;
 }
 
 body main section .technologies {
