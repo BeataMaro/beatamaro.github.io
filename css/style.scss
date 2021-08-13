@@ -79,10 +79,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        // writing-mode: vertical-rl;
 
         li {
-          text-align: center;
+          text-align: right;
           text-transform: uppercase;
           font-size: 1.2rem;
           font-weight: 700;
@@ -114,7 +113,7 @@ body {
 
       h1,
       h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-transform: uppercase;
       }
 
@@ -124,7 +123,9 @@ body {
       }
 
       h2 {
-        letter-spacing: 2px;
+        // letter-spacing: 2px;
+        // writing-mode: vertical-rl;
+        font-size: 2.5rem;
         color: $yellow;
         font-weight: 300;
       }
