@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,300;0,500;0,700;1,200&display=swap");
+body main section .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +60,7 @@ body > header .logo {
   width: 2rem;
   position: fixed;
   top: 5%;
-  left: 5%;
+  left: 2rem;
 }
 
 body > header .bgContainer {
@@ -196,6 +208,26 @@ body > header .scrollArrow {
   font-size: 2rem;
 }
 
-body section {
-  padding: 2rem;
+body main section {
+  margin: 2rem;
+}
+
+body main section header {
+  padding: 1rem 0;
+}
+
+body main section p {
+  line-height: 1.6;
+}
+
+body main section .technologies {
+  margin: 2rem 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section .technologies .technologyIcon {
+  width: 6rem;
 }

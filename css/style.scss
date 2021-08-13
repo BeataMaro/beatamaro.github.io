@@ -49,7 +49,7 @@ body {
       width: 2rem;
       position: fixed;
       top: 5%;
-      left: 5%;
+      left: 2rem;
     }
 
     .bgContainer {
@@ -161,7 +161,28 @@ body {
       font-size: 2rem;
     }
   }
-  section {
-    padding: 2rem;
+  main {
+    section {
+      margin: 2rem;
+
+      header {
+        padding: 1rem 0;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .technologies {
+        margin: 2rem 0;
+        @extend %centered;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .technologyIcon {
+          width: 6rem;
+        }
+      }
+    }
   }
 }
