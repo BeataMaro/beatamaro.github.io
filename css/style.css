@@ -33,6 +33,21 @@ body header {
   position: relative;
 }
 
+@media (max-width: 992px) {
+  body header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 body header .logo {
   width: 2rem;
   position: fixed;
@@ -61,6 +76,12 @@ body header .bgContainer::after {
   display: block;
 }
 
+@media (max-width: 992px) {
+  body header .bgContainer {
+    background-position: center;
+  }
+}
+
 body header nav {
   position: absolute;
   top: 70%;
@@ -72,6 +93,15 @@ body header nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  body header nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    bottom: 20%;
+  }
 }
 
 body header nav ul {
@@ -123,21 +153,43 @@ body header article {
           transform: translate(-10%, -55%);
 }
 
+@media (max-width: 992px) {
+  body header article {
+    top: 30%;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+}
+
 body header article h1,
 body header article h2 {
-  font-size: 2rem;
   text-transform: uppercase;
 }
 
 body header article h1 {
   color: white;
+  font-size: 2rem;
   font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  body header article h1 {
+    font-size: 1.5rem;
+  }
 }
 
 body header article h2 {
   font-size: 2.5rem;
   color: #faed24;
   font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  body header article h2 {
+    font-size: 1.6rem;
+  }
 }
 
 body header .scrollArrow {
