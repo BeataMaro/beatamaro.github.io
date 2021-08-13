@@ -54,6 +54,7 @@ body {
       background-image: url("../images/dale-nibbe-BaKQY0LUzOo-unsplash.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      filter: grayscale(0.6);
       width: 100%;
       height: 100%;
       &::after {
@@ -62,7 +63,7 @@ body {
         height: 100%;
         position: absolute;
         top: 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), $dark);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), $dark);
         display: block;
       }
     }
@@ -71,20 +72,17 @@ body {
       top: 70%;
       right: 5%;
       bottom: 50%;
-      // width: auto;
       display: flex;
       justify-content: flex-end;
 
       ul {
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-
         // writing-mode: vertical-rl;
 
         li {
-          text-align: right;
+          text-align: center;
           text-transform: uppercase;
           font-size: 1.2rem;
           font-weight: 700;
@@ -102,7 +100,7 @@ body {
           }
 
           &:hover::after {
-            transform: scaleX(1);
+            transform: scaleX(0.8);
           }
         }
       }
