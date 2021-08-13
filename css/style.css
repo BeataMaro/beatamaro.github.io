@@ -24,10 +24,6 @@ html {
   font-family: "Exo", sans-serif;
 }
 
-body {
-  color: #284d1e;
-}
-
 body > header {
   height: 120vh;
   position: relative;
