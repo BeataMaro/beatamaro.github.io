@@ -1,0 +1,14 @@
+$primary: yellow;
+$navy: #182b47;
+
+@import 'bootstrap';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $navy;
+}
