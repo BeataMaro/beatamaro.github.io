@@ -1,12 +1,14 @@
 import _ from 'lodash';
 import '../scss/styles.scss';
+import '../index.html';
 import * as bootstrap from 'bootstrap';
 
-function component() {
-  const element = document.createElement('div');
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+import renderNav from './nav-component';
+import renderPlant from './hero-component';
+import renderFooter from './footer-container';
+import renderAbout from './about-component';
 
-  return element;
-}
-
-document.body.appendChild(component());
+renderNav();
+renderAbout();
+renderPlant();
+renderFooter();

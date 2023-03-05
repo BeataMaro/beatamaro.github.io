@@ -1,5 +1,5 @@
-$primary: yellow;
-$navy: #182b47;
+// $primary: yellow;
+// $navy: #182b47;
 
 @import 'bootstrap';
 
@@ -7,12 +7,19 @@ $navy: #182b47;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
+  width: 300px;
 }
 
-body {
-  background-color: $navy;
+ul li {
+  list-style: none;
 }
+
+// body {
+//   background-color: $navy;
+// }
+
