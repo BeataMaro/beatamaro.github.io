@@ -1,12 +1,13 @@
 import plantImage from '../assets/images/marek-piwnicki-unsplash.jpg';
-import { mainContainer } from './createAppStructure';
+import { headerContainer } from './createAppStructure';
 
-function renderPlant() {
+function renderHero() {
   const gradientPlant = document.createElement('img');
+  gradientPlant.classList.add('img-fluid');
   gradientPlant.alt = 'plant on the purple-gradient background';
   gradientPlant.src = plantImage;
 
-  mainContainer.appendChild(gradientPlant);
+  headerContainer.appendChild(gradientPlant);
 }
 
-export default renderPlant;
+export default renderHero;

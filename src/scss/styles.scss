@@ -3,23 +3,22 @@
 
 @import 'bootstrap';
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
-img {
-  max-width: 100%;
-  width: 300px;
+body {
+  padding-top: 7rem;
 }
 
-ul li {
-  list-style: none;
+.footer-icon {
+  width: 4rem;
 }
-
-// body {
-//   background-color: $navy;
-// }
 

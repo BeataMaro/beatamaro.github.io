@@ -12,7 +12,6 @@ mainContainer.classList.add(
   'flex-wrap',
 );
 
-footerContainer.classList.add('text-center');
 app.appendChild(headerContainer);
 app.appendChild(mainContainer);
 app.appendChild(footerContainer);

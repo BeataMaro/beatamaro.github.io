@@ -5,19 +5,18 @@ function renderNav() {
   const fragment = new DocumentFragment();
   const navigation = document.createElement('nav');
   navigation.classList.add(
-    // 'container-lg-fluid',
     'fixed-top',
     'navbar',
     'navbar-expand-lg',
     'navbar-light',
-    'bg-light',
     'justify-content-end',
+    'bg-light',
   );
   navigation.role = 'navigation';
 
   // hamburger menu
   const hamburgerBtn = document.createElement('button');
-  hamburgerBtn.classList.add('navbar-toggler', 'me-2');
+  hamburgerBtn.classList.add('navbar-toggler', 'me-2', 'm-3');
   hamburgerBtn.type = 'button';
   hamburgerBtn.setAttribute('data-bs-toggle', 'collapse');
   hamburgerBtn.setAttribute('data-bs-target', '#navbarNavAltMarkup');
@@ -30,7 +29,7 @@ function renderNav() {
   hamburgerBtn.appendChild(hamburgerBtnIcon);
 
   const collapseNavbar = document.createElement('div');
-  collapseNavbar.classList.add('collapse', 'navbar-collapse', 'shadow-sm', 'p-3', 'justify-content-end');
+  collapseNavbar.classList.add('collapse', 'navbar-collapse', 'bg-light', 'shadow-sm', 'p-3', 'justify-content-end');
   collapseNavbar.id = 'navbarNavAltMarkup';
 
   const navbarNav = document.createElement('div');
