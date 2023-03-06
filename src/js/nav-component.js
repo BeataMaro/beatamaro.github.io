@@ -1,10 +1,33 @@
 import * as bootstrap from 'bootstrap';
 import { headerContainer } from './createAppStructure';
 
+const BODY = document.body;
+
+function closeNavbar(e) {
+  const hambBtn = document.querySelector('.navbar-toggler');
+  const navbar = document.querySelector('.navbar-collapse');
+  if (e.target.closest('.navbar')) return;
+  BODY.classList.remove('darkened-body');
+  hambBtn.classList.remove('collapsed');
+  navbar.classList.remove('show');
+}
+
+BODY.addEventListener('click', closeNavbar);
+
+function darkenedBody() {
+  const hambBtn = document.querySelector('.navbar-toggler');
+  if (!hambBtn.classList.contains('collapsed')) {
+    BODY.classList.add('darkened-body');
+  } else {
+    BODY.classList.remove('darkened-body');
+  }
+}
+
 function renderNav() {
   const fragment = new DocumentFragment();
   const navigation = document.createElement('nav');
   navigation.classList.add(
+    'container-fluid',
     'fixed-top',
     'navbar',
     'navbar-expand-lg',
@@ -28,26 +51,35 @@ function renderNav() {
   hamburgerBtnIcon.className = 'navbar-toggler-icon';
   hamburgerBtn.appendChild(hamburgerBtnIcon);
 
+  hamburgerBtn.addEventListener('click', darkenedBody);
+
   const collapseNavbar = document.createElement('div');
-  collapseNavbar.classList.add('collapse', 'navbar-collapse', 'bg-light', 'shadow-sm', 'p-3', 'justify-content-end');
+  collapseNavbar.classList.add(
+    'collapse',
+    'navbar-collapse',
+    'bg-light',
+    'shadow-sm',
+    'p-3',
+    'justify-content-end',
+  );
   collapseNavbar.id = 'navbarNavAltMarkup';
 
   const navbarNav = document.createElement('div');
   navbarNav.classList.add('navbar-nav');
 
   const navListAboutLink = document.createElement('a');
-  navListAboutLink.href = '#';
+  navListAboutLink.href = '#about-section';
   navListAboutLink.textContent = 'About';
   const navListSkillsLink = document.createElement('a');
-  navListSkillsLink.href = '#';
+  navListSkillsLink.href = '#skills-section';
   navListSkillsLink.textContent = 'Skills';
 
   const navListPortfolioLink = document.createElement('a');
-  navListPortfolioLink.href = '#';
+  navListPortfolioLink.href = '#portfolio-section';
   navListPortfolioLink.textContent = 'Portfolio';
 
   const navListContactLink = document.createElement('a');
-  navListContactLink.href = '#';
+  navListContactLink.href = '#contact-section';
   navListContactLink.textContent = 'Contact';
 
   fragment.append(navigation);

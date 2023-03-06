@@ -9,10 +9,12 @@ import renderAbout from './about-component';
 import renderSkills from './skills-component';
 import renderPortfolio from './portfolio-component';
 import renderFooter from './footer-container';
+import renderContact from './contact-component';
 
 renderNav();
 renderHero();
 renderAbout();
 renderSkills();
 renderPortfolio();
+renderContact();
 renderFooter();
