@@ -1,7 +1,13 @@
-// $primary: yellow;
-// $navy: #182b47;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,300;1,500&display=swap');
+
+// $font-family-base: 'Raleway', sans-serif;
 
 @import 'bootstrap';
+
+// variables
+$darkGrey: #2b2b35;
+$chaber: #6a68e0;
+$honey: #bbb235;
 
 html {
   scroll-behavior: smooth;
@@ -14,13 +20,18 @@ html {
   padding: 0;
 }
 
+::selection {
+  background-color: $honey;
+  color: white;
+}
+
 body {
   padding-top: 7rem;
-  position: relative;
 
   &.darkened-body {
     body {
       pointer-events: none;
+      color: $darkGrey;
     }
     div.overlay {
       display: block;
@@ -39,25 +50,71 @@ body {
   div.overlay {
     display: none;
   }
-
-  nav {
-    z-index: 100;
+  .section {
+    scroll-padding-top: 5rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
-  .section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  header {
+    .section-hero {
+      background-image: url('../assets/images/wall-yeon-li--unsplash.jpg');
+      background-repeat: no-repeat;
+      height: 80vh;
+    }
+    nav {
+      z-index: 100;
 
-    .tech-icon {
-      width: 10rem;
+      .nav-link {
+        transition: 0.2s ease;
+        &:hover {
+          color: $honey;
+        }
+        &.active-section {
+          background-color: $honey;
+          color: white;
+        }
+      }
+    }
+    .hero-text {
+      color: $darkGrey;
+    }
+  }
+  main {
+    .profile-image {
+      opacity: 0.8;
+      z-index: -1;
     }
 
-    .contact-icon {
-      width: 3rem;
+    .section-skills {
+      .tech-icon {
+        width: 12rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .section-contact {
+      background-color: $darkGrey;
+      color: rgb(167, 175, 202);
+      
+      .contact-icon {
+        width: 4rem;
+      }
+      .linkedin-icon {
+        width: 5rem;
+      }
     }
   }
 
   .footer-icon {
-    width: 4rem;
+    width: 6rem;
   }
 }

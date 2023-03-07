@@ -23,6 +23,12 @@ function darkenedBody() {
   }
 }
 
+function highlightActiveNavItem(e) {
+  const navLinks = document.querySelectorAll('div.navbar-nav > a');
+  navLinks.forEach((link) => link.classList.remove('active-section'));
+  e.target.classList.add('active-section');
+}
+
 function renderNav() {
   const fragment = new DocumentFragment();
   const navigation = document.createElement('nav');
@@ -68,18 +74,18 @@ function renderNav() {
   navbarNav.classList.add('navbar-nav');
 
   const navListAboutLink = document.createElement('a');
-  navListAboutLink.href = '#about-section';
+  navListAboutLink.href = '#about';
   navListAboutLink.textContent = 'About';
   const navListSkillsLink = document.createElement('a');
-  navListSkillsLink.href = '#skills-section';
+  navListSkillsLink.href = '#skills';
   navListSkillsLink.textContent = 'Skills';
 
   const navListPortfolioLink = document.createElement('a');
-  navListPortfolioLink.href = '#portfolio-section';
+  navListPortfolioLink.href = '#portfolio';
   navListPortfolioLink.textContent = 'Portfolio';
 
   const navListContactLink = document.createElement('a');
-  navListContactLink.href = '#contact-section';
+  navListContactLink.href = '#contact';
   navListContactLink.textContent = 'Contact';
 
   fragment.append(navigation);
@@ -97,7 +103,11 @@ function renderNav() {
   );
 
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
-  [...navLinks].map((item) => item.classList.add('nav-item', 'nav-link'));
+  [...navLinks].map((item) => {
+    item.classList.add('nav-item', 'nav-link');
+    item.addEventListener('click', (e) => highlightActiveNavItem(e));
+    return null;
+  });
 }
 
 export default renderNav;

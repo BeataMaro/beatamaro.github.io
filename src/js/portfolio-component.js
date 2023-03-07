@@ -13,7 +13,7 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
     <h5 class="card-title">${title}</h5>
   </div>
   <ul class="list-group list-group-flush">
-  <li class="list-group-item">
+  <li class="list-group-item">Technologies: 
   ${technologies.map((tech) => ` ${tech} `)}
   </li>
   </ul>
@@ -26,9 +26,10 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
 
 function renderPortfolio() {
   const fragment = new DocumentFragment();
-  const portfolioTemplate = `<section id="portfolio-section" class="section container text-center"><h2>Portfolio</h2>
+  const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
+  <h2 aria-label="Portfolio" class="sr-only">Portfolio</h2>
     <div class="row">
-     <div class="col">
+     <div class="col-6">
   ${createSingleCardTemplate(
     selfmaxScreen,
     'SelfMAX',
@@ -36,8 +37,6 @@ function renderPortfolio() {
     'https://github.com/BeataMaro/SelfMAX',
     'http://selfmax.pl',
   )}
-  </div>
-  <div class="col">
   ${createSingleCardTemplate(
     onlineZooScreen,
     'Online Zoo',
@@ -45,8 +44,9 @@ function renderPortfolio() {
     'https://github.com/BeataMaro/online-zoo/tree/gh-pages/pages/main',
     'https://beatamaro.github.io/online-zoo/pages/main/',
   )}
-  </div>
-  <div class="col">
+</div>
+  <div class="row">
+  <div class="col-6">
   ${createSingleCardTemplate(
     workshopScreen,
     'Workshop',
@@ -55,9 +55,7 @@ function renderPortfolio() {
     'https://przebrala-sie-miarka.netlify.app/',
   )}
    </div>
-  </div>
-  <div class="row">
-   <div class="col">
+   <div class="col-6">
   ${createSingleCardTemplate(
     weatherAppScreen,
     'Weather Application',
@@ -66,7 +64,9 @@ function renderPortfolio() {
     'https://beatamaro.github.io/Weather-app/',
   )}
   </div>
-  <div class="col">
+  </div>
+  <div class="row">
+  <div class="col-6">
   ${createSingleCardTemplate(
     yourShopScreen,
     'Your Shop',

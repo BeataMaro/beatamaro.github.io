@@ -1,13 +1,14 @@
-import plantImage from '../assets/images/marek-piwnicki-unsplash.jpg';
+// import plantImage from '../assets/images/marek-piwnicki-unsplash.jpg';
 import { headerContainer } from './createAppStructure';
+import createHtmlFromTemplate from './utils';
 
 function renderHero() {
-  const gradientPlant = document.createElement('img');
-  gradientPlant.classList.add('img-fluid');
-  gradientPlant.alt = 'plant on the purple-gradient background';
-  gradientPlant.src = plantImage;
+  const fragment = new DocumentFragment();
+  const heroTemplate = `<section class="section-hero container-fluid d-flex justify-content-center align-items-center"><div class="hero-text"><h1>Beata Maro</h1><h2>junior front-end developer</h2></div>
+</section>`;
 
-  headerContainer.appendChild(gradientPlant);
+  fragment.append(createHtmlFromTemplate(heroTemplate));
+  headerContainer.appendChild(fragment);
 }
 
 export default renderHero;
