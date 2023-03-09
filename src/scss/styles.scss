@@ -32,6 +32,13 @@ html {
 }
 
 body {
+
+  .gsap-element {
+    object-fit: cover;
+    width: 30rem;
+    margin: auto;
+  }
+
   padding-top: 7rem;
 
   &.darkened-body {
