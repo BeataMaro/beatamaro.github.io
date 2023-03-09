@@ -17,7 +17,7 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
   const projectTemplate = `<div class="card shadow">
   <a href="${url}" target="_blank" rel="no-referrer"><img src="${img}" class="card-img-top" alt="${title} website screen"></a>
   <div class="card-body">
-    <h5 class="card-title">${title}</h5>
+    <h5 class="card-title fw-bold">${title}</h5>
   </div>
   <ul class="list-group list-group-flush">
   <li class="list-group-item">Technologies: 

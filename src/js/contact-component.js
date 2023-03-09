@@ -8,12 +8,12 @@ function renderContact() {
   const fragment = new DocumentFragment();
   const contactTemplate = `<section id="contact" class="section-contact container-fluid d-flex justify-content-center p-5">
   <h2 aria-label="Contact" class="sr-only">Contact</h2>
-  <div class="row row-cols row-cols-xl-3 p-5 d-flex flex-column flex-xl-row container border">
-  <div class="col d-flex align-items-center">
+  <div class="row row-cols-xl-3 p-5 d-flex flex-column flex-xl-row container border">
+  <div class="col center">
   <img src="${emailIcon}" alt="envelope icon" class="img-fluid contact-icon me-3 shadow-lg"/>
   <strong>maro.beata@gmail.com</strong>
   </div>
-  <div class="col d-flex align-items-center">
+  <div class="col center">
   <img src="${mobileIcon}" alt="mobile phone icon" class="img-fluid contact-icon me-3 shadow-lg" />
   <strong>+48 511 909 309</strong></div>
   <div class="col text-end">
