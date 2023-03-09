@@ -11,7 +11,7 @@ $honey: #bbb235;
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 1rem;
+  scroll-padding-top: 3rem;
 }
 
 * {
@@ -23,6 +23,12 @@ html {
 ::selection {
   background-color: $honey;
   color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -51,8 +57,9 @@ body {
     display: none;
   }
   .section {
-    scroll-padding-top: 5rem;
-    padding-top: 9rem;
+    min-height: 100vh;
+    // scroll-padding-top: 5rem;
+    // padding-top: 9rem;
     padding-bottom: 9rem;
   }
   .sr-only {
@@ -66,9 +73,20 @@ body {
 
   header {
     .section-hero {
-      background-image: url('../assets/images/wall-yeon-li--unsplash.jpg');
+      background-image: url('../assets/images/portfolio-hero-banner.png');
       background-repeat: no-repeat;
-      height: 80vh;
+      background-size: contain;
+      background-position: center;
+      height: 90vh;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      .bulb-icon {
+        width: 14rem;
+        opacity: .8;
+      }
     }
     nav {
       z-index: 100;
@@ -79,8 +97,7 @@ body {
           color: $honey;
         }
         &.active-section {
-          background-color: $honey;
-          color: white;
+          color: $honey;
         }
       }
     }
@@ -89,22 +106,35 @@ body {
     }
   }
   main {
-    .profile-image {
-      opacity: 0.8;
-      z-index: -1;
-    }
+    // .section-about {
+    //   .profile-image {
+    //     opacity: 0.2;
+    //       }
+    // }
 
-    .section-skills {
-      .tech-icon {
-        width: 12rem;
-        margin-top: 2rem;
+    .section-portfolio {
+      .card {
+        transition: .2s linear;
+        cursor: pointer;
+        .tech-icon {
+          width: 50px;
+        }
+        &:hover {
+          scale: 1.05;
+        }
       }
     }
 
+    // .section-skills {
+    //   .tech-logo {
+    //     width: 11rem;
+    //   }
+    // }
+
     .section-contact {
-      background-color: $darkGrey;
-      color: rgb(167, 175, 202);
-      
+      // background-color: $darkGrey;
+      // color: rgb(167, 175, 202);
+
       .contact-icon {
         width: 4rem;
       }
