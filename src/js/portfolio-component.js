@@ -75,7 +75,7 @@ function renderPortfolio() {
     'https://beatamaro.github.io/Weather-app/',
   )}
   </div>
-  <div class="col d-flex justify-content-center">
+  <div class="col d-flex justify-content-center portfolio-trigger">
   ${createSingleCardTemplate(
     yourShopScreen,
     'Your Shop',

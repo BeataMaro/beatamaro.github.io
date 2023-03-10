@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import '../scss/styles.scss';
 import '../index.html';
 import * as bootstrap from 'bootstrap';
@@ -22,9 +21,52 @@ renderPortfolio();
 renderContact();
 renderFooter();
 
-async function animation(selector) {
-  const navigation = await document.querySelector(selector);
+// animations
+async function animatedNav() {
+  const navigation = await document.querySelector('nav');
   gsap.fromTo(navigation, { y: -50 }, { y: 0, duration: 1 });
 }
 
-animation('nav');
+async function scaleElement(el) {
+  const elem = document.querySelector(el);
+  gsap.fromTo(elem, { scale: 0.6 }, { scale: 1, duration: 0.75 });
+}
+
+async function moveSection(element) {
+  const section = await document.querySelector(element);
+  gsap.fromTo(
+    section,
+    { x: -400, autoAlpha: 0 },
+    {
+      x: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: element,
+        scrub: true,
+      },
+    },
+  );
+}
+
+async function animatedElements(elements, triggerEl) {
+  const logoSkills = await document.querySelectorAll(elements);
+  const arr = Array.from(logoSkills);
+  gsap.fromTo(
+    arr,
+    { y: -60, autoAlpha: 0 },
+    {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: triggerEl,
+      },
+    },
+  );
+}
+
+animatedNav();
+scaleElement('.section-hero');
+moveSection('.section-about');
+animatedElements('.skill-logo', '.section-skills');
+animatedElements('.card', '.section-portfolio');

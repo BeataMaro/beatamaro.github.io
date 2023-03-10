@@ -1,4 +1,3 @@
-import * as bootstrap from 'bootstrap';
 import { headerContainer } from './createAppStructure';
 
 const BODY = document.body;
@@ -62,7 +61,6 @@ function renderNav() {
   collapseNavbar.classList.add(
     'collapse',
     'navbar-collapse',
-    // not allowed!! 'container',
     'bg-light',
     'shadow-lg',
     'p-3',

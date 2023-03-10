@@ -11,11 +11,11 @@ function renderContact() {
   <div class="row row-cols-lg-3 g-4 p-4 flex-column flex-lg-row d-flex justify-content-center">
   <div class="col flex-column center">
   <img src="${emailIcon}" alt="envelope icon" class="img-fluid contact-icon me-3"/>
-  <strong>maro.beata@gmail.com</strong>
+  <strong class="p-2">maro.beata@gmail.com</strong>
   </div>
   <div class="col flex-column center">
   <img src="${mobileIcon}" alt="mobile phone icon" class="img-fluid contact-icon me-3 mb-2" />
-  <strong>+48 511 909 309</strong></div>
+  <strong class="p-2">+48 511 909 309</strong></div>
   <div class="col text-center">
   <a href="https://www.linkedin.com/in/beata-maro-junior-web-developer/" target="_blank" rel="no-referrer">
   <img src="${linkedInIcon}" alt="LinkedIn icon" class="img-fluid contact-icon linkedin-icon" /></a></div></div></section>`;

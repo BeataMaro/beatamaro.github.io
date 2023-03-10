@@ -39,7 +39,6 @@
     "bootstrap-sass": "^3.4.3",
     "favicons-webpack-plugin": "^6.0.0",
     "gsap": "file:gsap-bonus.tgz",
-    "lodash": "^4.17.21",
     "mini-svg-data-uri": "^1.4.4"
   }
 }
