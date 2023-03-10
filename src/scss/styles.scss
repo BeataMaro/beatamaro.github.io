@@ -1,7 +1,15 @@
-$primary: yellow;
-$navy: #182b47;
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
 @import 'bootstrap';
+
+// variables
+$darkGrey: #2a3140;
+$greyBrown: #cccbc5;
+$honey: #ecbf1b;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
 
 * {
   box-sizing: border-box;
@@ -9,6 +17,122 @@ $navy: #182b47;
   padding: 0;
 }
 
+::selection {
+  color: $honey;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-  background-color: $navy;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+
+  .gsap-element {
+    object-fit: cover;
+    width: 30rem;
+    margin: auto;
+  }
+
+  padding-top: 7rem;
+
+  &.darkened-body {
+    body {
+      pointer-events: none;
+      color: $darkGrey;
+    }
+    div.overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+  }
+
+  div.overlay {
+    display: none;
+  }
+  .section {
+    min-height: 80vh;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  header {
+    .section-hero {
+      background-color: $greyBrown;
+      .hero-image-xxl {
+        height: 85vh;
+      }
+    }
+    nav {
+      z-index: 100;
+
+      .nav-link {
+        transition: 0.2s ease;
+        &:hover {
+          color: $honey;
+          text-shadow: 1px 1px rgba($honey, 0.4);
+        }
+        &.active-section {
+          color: $honey;
+        }
+      }
+    }
+    .hero-text {
+      color: $darkGrey;
+    }
+  }
+  main {
+    background-color: $greyBrown;
+
+    .section-portfolio {
+      .card {
+        transition: 0.2s linear;
+        cursor: pointer;
+        .tech-icon {
+          width: 50px;
+        }
+        &:hover {
+          scale: 1.05;
+        }
+      }
+    }
+    .section-contact {
+      background-color: $darkGrey;
+      color: $greyBrown;
+
+      .contact-icon {
+        width: 4rem;
+      }
+      .linkedin-icon {
+        width: 5rem;
+      }
+    }
+  }
+
+  .footer-container {
+    background-color: $greyBrown;
+
+    .footer-icon {
+      width: 6rem;
+    }
+  }
 }
