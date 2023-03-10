@@ -13,8 +13,8 @@ import gitLogo from '../assets/icons/Git-Logo-Black.svg';
 import adobeXDLogo from '../assets/icons/Adobe_XD-icon.png';
 
 function createSkillLogoTemplate(logo) {
-  const template = `<div class="col center shadow border">
-  <img src="${logo}" alt="Tech logo" class="img-fluid tech-logo p-4"/>
+  const template = `<div class="col center shadow-sm bg-light m-1">
+  <img src="${logo}" alt="Tech logo" class="img-fluid tech-logo py-3"/>
   </div>`;
   return template;
 }
@@ -22,8 +22,8 @@ function createSkillLogoTemplate(logo) {
 function renderSkills() {
   const fragment = new DocumentFragment();
   const skillsTemplate = `<section id="skills" class="section section-skills container pt-5">
-  <h2 aria-label="Skills" class="sr-only">Skills</h2>
-  <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4 flex-column flex-sm-row justify-content-center align-items-center align-items-sm-stretch">
+  <h2 aria-label="skills" class="text-center fw-bold mb-4">My skills</h2>
+  <div class="row row-cols-3 row-cols-lg-4 flex-column flex-sm-row justify-content-center align-items-center align-items-sm-stretch">
  ${createSkillLogoTemplate(cssLogo)}
  ${createSkillLogoTemplate(htmlLogo)}
  ${createSkillLogoTemplate(scssLogo)}

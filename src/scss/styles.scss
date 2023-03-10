@@ -7,8 +7,8 @@
 
 // variables
 $darkGrey: #2b2b35;
-$chaber: #6a68e0;
-$honey: #bbb235;
+$greyBrown: #cccbc5;
+$honey: #ECBF1B;
 
 html {
   scroll-behavior: smooth;
@@ -82,22 +82,14 @@ body {
   }
 
   header {
-    .section-hero {
-      background-image: url('../assets/images/portfolio-hero-banner.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      height: 90vh;
-
-      h1 {
-        font-size: 5rem;
-      }
-
-      .bulb-icon {
-        width: 14rem;
-        opacity: .8;
-      }
-    }
+        .section-hero {
+          background-color: $honey;
+          .hero-image-xxl {
+            height: 80vh;
+            object-fit: cover;
+            max-width: 100%;
+          }
+        }
     nav {
       z-index: 100;
 
@@ -105,6 +97,7 @@ body {
         transition: 0.2s ease;
         &:hover {
           color: $honey;
+          text-shadow: 1px 1px rgba($honey, .4);
         }
         &.active-section {
           color: $honey;
@@ -116,11 +109,8 @@ body {
     }
   }
   main {
-    // .section-about {
-    //   .profile-image {
-    //     opacity: 0.2;
-    //       }
-    // }
+
+    background-color: $greyBrown;
 
     .section-portfolio {
       .card {
@@ -135,16 +125,12 @@ body {
       }
     }
 
-    // .section-skills {
-    //   .tech-logo {
-    //     width: 11rem;
-    //   }
-    // }
-
     .section-contact {
-      // background-color: $darkGrey;
-      // color: rgb(167, 175, 202);
 
+      background-image: url('../assets/images/wall-yeon-li--unsplash.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
       .contact-icon {
         width: 4rem;
       }
@@ -154,7 +140,10 @@ body {
     }
   }
 
-  .footer-icon {
-    width: 6rem;
+  .footer-container {
+    background-color: $greyBrown;
+    .footer-icon {
+      width: 6rem;
+    }
   }
 }

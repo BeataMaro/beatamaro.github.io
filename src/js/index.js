@@ -21,3 +21,10 @@ renderSkills();
 renderPortfolio();
 renderContact();
 renderFooter();
+
+async function animation(selector) {
+  const navigation = await document.querySelector(selector);
+  gsap.fromTo(navigation, { y: -50 }, { y: 0, duration: 1 });
+}
+
+animation('nav');

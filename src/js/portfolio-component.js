@@ -14,7 +14,7 @@ import figmaLogo from '../assets/icons/figma-logo.svg';
 import githubLogo from '../assets/icons/github_icon.png';
 
 function createSingleCardTemplate(img, title, technologies, github, url) {
-  const projectTemplate = `<div class="card shadow">
+  const projectTemplate = `<div class="card shadow p-3">
   <a href="${url}" target="_blank" rel="no-referrer"><img src="${img}" class="card-img-top" alt="${title} website screen"></a>
   <div class="card-body">
     <h5 class="card-title fw-bold">${title}</h5>
@@ -22,11 +22,11 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
   <ul class="list-group list-group-flush">
   <li class="list-group-item">Technologies: 
   <div class="d-flex">
-  ${technologies.map((techimg) => `<img src="${techimg}" alt="technology logo" class="img-fluid tech-icon me-2"/>`)}
+  ${technologies.map((techimg) => `<img src="${techimg}" alt="technology logo" class="img-fluid tech-icon me-2">`)}
   </div>
   </li>
   </ul>
-  <div class="card-body">
+  <div class="card-body d-flex align-items-center justify-content-between">
   <strong> Github repository:</strong>
     <a href="${github}" class="card-link link-secondary" target="_blank" rel="no-referrer"><img src="${githubLogo}" alt="Github logo" class="img-fluid tech-icon"></a>
   </div>
@@ -37,7 +37,7 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
 function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
-  <h2 aria-label="Portfolio" class="sr-only">Portfolio</h2>
+  <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
     <div class="row row-cols-md-2 row-cols-xl-3 g-4 d-flex flex-column flex-md-row justify-content-center">
      <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
