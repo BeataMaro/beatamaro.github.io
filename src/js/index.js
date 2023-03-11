@@ -22,6 +22,37 @@ renderContact();
 renderFooter();
 
 // animations
+
+ScrollTrigger.saveStyles('.section-about');
+ScrollTrigger.matchMedia({
+  // desktop
+  '(min-width: 800px)': function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-about',
+        start: 'bottom bottom',
+        scrub: 1,
+        end: '80%',
+        pin: true,
+      },
+    });
+    tl.to('.section-about', { opacity: 0 }, { y: 200 });
+  },
+  // mobile
+  '(max-width: 799px)': function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section-about',
+        start: 'bottom bottom',
+        scrub: 2,
+        end: '100%',
+        pin: true,
+      },
+    });
+    tl.to('.section-about', { opacity: 0 });
+  },
+});
+
 async function animatedNav() {
   const navigation = await document.querySelector('nav');
   gsap.fromTo(navigation, { y: -50 }, { y: 0, duration: 1 });
@@ -29,20 +60,15 @@ async function animatedNav() {
 
 async function scaleElement(el) {
   const elem = document.querySelector(el);
-  gsap.fromTo(elem, { scale: 0.6 }, { scale: 1, duration: 0.75 });
-}
-
-async function moveSection(element) {
-  const section = await document.querySelector(element);
   gsap.fromTo(
-    section,
-    { x: -400, autoAlpha: 0 },
+    elem,
+    { scale: 0.6 },
     {
-      x: 0,
-      autoAlpha: 1,
+      scale: 1,
+      duration: 0.75,
       scrollTrigger: {
-        trigger: element,
-        scrub: true,
+        trigger: el,
+        toggleActions: 'play none none reverse',
       },
     },
   );
@@ -51,22 +77,26 @@ async function moveSection(element) {
 async function animatedElements(elements, triggerEl) {
   const logoSkills = await document.querySelectorAll(elements);
   const arr = Array.from(logoSkills);
-  gsap.fromTo(
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerEl,
+      start: 'top center',
+      toggleActions: 'play none none reverse',
+    },
+  });
+  tl.fromTo(
     arr,
     { y: -60, autoAlpha: 0 },
     {
       y: 0,
       autoAlpha: 1,
       stagger: 0.2,
-      scrollTrigger: {
-        trigger: triggerEl,
-      },
     },
   );
 }
 
 animatedNav();
 scaleElement('.section-hero');
-moveSection('.section-about');
+scaleElement('.profile-image');
 animatedElements('.skill-logo', '.section-skills');
 animatedElements('.card', '.section-portfolio');
