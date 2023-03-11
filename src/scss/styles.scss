@@ -62,9 +62,8 @@ body {
     display: none;
   }
   .section {
-    min-height: 80vh;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
   }
   .sr-only {
     position: absolute;
@@ -111,7 +110,7 @@ body {
           width: 50px;
         }
         &:hover {
-          scale: 1.05;
+          background-color: $greyBrown;
         }
       }
     }

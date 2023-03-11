@@ -23,7 +23,7 @@ function renderSkills() {
   const fragment = new DocumentFragment();
   const skillsTemplate = `<section id="skills" class="section section-skills container py-4 border-bottom">
   <h2 aria-label="skills" class="text-center fw-bold mb-4">My skills</h2>
-  <div class="row row-cols-3 row-cols-lg-4 flex-column flex-sm-row justify-content-center align-items-center align-items-sm-stretch">
+  <div class="row row-cols-5 justify-content-center">
  ${createSkillLogoTemplate(cssLogo)}
  ${createSkillLogoTemplate(htmlLogo)}
  ${createSkillLogoTemplate(scssLogo)}
