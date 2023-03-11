@@ -4,7 +4,7 @@ import profileImage from '../assets/images/LinkedInd-profile-photo-b&w.jpg';
 
 function renderAbout() {
   const aboutText = createHtmlFromTemplate(`<section id="about" class="section section-about container border-bottom py-4"><h2 aria-label="About" class="sr-only">About</h2>
-  <div class="row row-cols-md-2 row-cols-lg-3 g-2 d-flex flex-column flex-md-row justify-content-center p-md-1  about-trigger">
+  <div class="row row-cols-md-2 row-cols-lg-3 g-2 d-flex flex-column flex-md-row justify-content-center p-md-1">
   <div class="profile-image col d-flex  align-self-start align-self-md-end align-self-lg-center align-items-center align-items-lg-start bg-light p-3">
   <img src="${profileImage}" alt="profile" class="img-fluid img-lg-thumbnail rounded"/>
   </div>

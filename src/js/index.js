@@ -22,7 +22,6 @@ renderContact();
 renderFooter();
 
 // animations
-
 ScrollTrigger.saveStyles('.section-about');
 ScrollTrigger.matchMedia({
   // desktop
