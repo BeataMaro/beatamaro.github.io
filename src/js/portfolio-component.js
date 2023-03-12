@@ -4,7 +4,6 @@ import selfmaxScreen from '../assets/images/selfmax-screen.png';
 import onlineZooScreen from '../assets/images/online-zoo-screen.png';
 import workshopScreen from '../assets/images/workshop-screen.png';
 import weatherAppScreen from '../assets/images/weather-app-screen.png';
-import yourShopScreen from '../assets/images/your-shop-screen.png';
 
 import scssLogo from '../assets/icons/sass.svg';
 import javascriptLogo from '../assets/icons/javascript.svg';
@@ -38,7 +37,7 @@ function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
-    <div class="row row-cols-md-2 row-cols-xl-3 g-4 d-flex justify-content-center">
+    <div class="row row-cols-2 g-4 d-flex justify-content-center">
      <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     selfmaxScreen,
@@ -73,15 +72,6 @@ function renderPortfolio() {
     [reactLogo],
     'https://github.com/BeataMaro/Weather-app',
     'https://beatamaro.github.io/Weather-app/',
-  )}
-  </div>
-  <div class="col d-flex justify-content-center portfolio-trigger">
-  ${createSingleCardTemplate(
-    yourShopScreen,
-    'Your Shop',
-    [reactLogo],
-    'https://github.com/BeataMaro/your-shop',
-    'https://beatamaro.github.io/your-shop/',
   )}
   </div>
   </div>
