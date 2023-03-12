@@ -29,9 +29,9 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-about',
-        start: 'bottom bottom',
+        start: 'center top',
         scrub: 1,
-        end: '80%',
+        end: '100%',
         pin: true,
       },
     });
