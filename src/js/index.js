@@ -43,7 +43,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: '.section-about',
         start: 'bottom bottom',
-        scrub: 2,
+        scrub: 1,
         end: '100%',
         pin: true,
       },
