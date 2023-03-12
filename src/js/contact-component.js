@@ -6,7 +6,7 @@ import linkedInIcon from '../assets/icons/linkedin-icon.png';
 
 function renderContact() {
   const fragment = new DocumentFragment();
-  const contactTemplate = `<section id="contact" class="section-contact container-fluid p-5">
+  const contactTemplate = `<section id="contact" class="section-contact container-fluid p-5 mt-4">
   <h2 aria-label="Contact" class="text-center fw-bold hl-lg">Contact</h2>
   <div class="row row-cols-lg-3 g-4 p-4 flex-column flex-lg-row d-flex justify-content-center">
   <div class="col flex-column center">

@@ -3,13 +3,13 @@ import { mainContainer } from './createAppStructure';
 import profileImage from '../assets/images/LinkedInd-profile-photo-b&w.jpg';
 
 function renderAbout() {
-  const aboutText = createHtmlFromTemplate(`<div><div id="about"></div><section class="section section-about container border-bottom py-4"><h2 aria-label="About" class="sr-only">About</h2>
+  const aboutText = createHtmlFromTemplate(`<div><div id="about"></div><section class="section section-about container border-bottom p-4"><h2 aria-label="About" class="sr-only">About</h2>
   <div class="row row-cols-md-2 row-cols-lg-3 d-flex flex-column flex-md-row justify-content-center">
   <div class="profile-image col center bg-lg-light align-self-lg-center">
   <img  src="${profileImage}" alt="profile" class="img-fluid img-lg-thumbnail rounded"/>
   </div>
   <div class="col"> 
-  <p class="fs-1 fw-bolder lh-sm">Hi,</p>
+  <p class="fs-1 fw-bolder lh-sm mt-3 mt-md-none">Hi,</p>
   <p class="fs-1 fw-bolder lh-sm">I'm Beata</p><strong class="fs-4 fw-bold lh-md fst-italic">Junior front-end developer with 5&nbsp;months commercial experience.</strong>
   <p class="text-break fw-light fst-italic mt-3">I used to work as a marketing specialist in a&nbsp;cultural institution, but my curiosity eventually led me down a&nbsp;new path -&nbsp;website management.</p>
   <p class="text-break fw-light fst-italic"> I decided to do a <strong>graphics course</strong> and get an internship at an advertising agency. I&nbsp;then did a postgraduate degree in <strong>front-end web application development</strong> and built my first commercial website using <strong>Gatsby.js</strong>.</p>

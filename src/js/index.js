@@ -42,10 +42,11 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-about',
+        // start: 'bottom bottom',
         start: 'bottom bottom',
         scrub: 1,
         end: '100%',
-        pin: true,
+        // pin: true,
       },
     });
     tl.to('.section-about', { opacity: 0 });
