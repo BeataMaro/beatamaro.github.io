@@ -103,6 +103,10 @@ function renderNav() {
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
   [...navLinks].map((item) => {
     item.classList.add('nav-item', 'nav-link');
+    item.addEventListener('click', () => {
+      const navbar = document.querySelector('.navbar-collapse');
+      navbar.classList.remove('show');
+    });
     item.addEventListener('click', (e) => highlightActiveNavItem(e));
     return null;
   });
