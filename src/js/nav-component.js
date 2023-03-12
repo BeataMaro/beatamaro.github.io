@@ -106,6 +106,7 @@ function renderNav() {
     item.addEventListener('click', () => {
       const navbar = document.querySelector('.navbar-collapse');
       navbar.classList.remove('show');
+      BODY.classList.remove('darkened-body');
     });
     item.addEventListener('click', (e) => highlightActiveNavItem(e));
     return null;
