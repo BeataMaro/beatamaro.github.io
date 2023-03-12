@@ -37,7 +37,7 @@ function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
-    <div class="row row-cols-2 g-4 d-flex justify-content-center">
+    <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center">
      <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     selfmaxScreen,
