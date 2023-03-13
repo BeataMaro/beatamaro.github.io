@@ -3,7 +3,7 @@ import { mainContainer } from './createAppStructure';
 import profileImage from '../assets/images/LinkedInd-profile-photo-b&w.jpg';
 
 function renderAbout() {
-  const aboutText = createHtmlFromTemplate(`<div><div id="about"></div><section class="section section-about container border-lg-bottom p-4"><h2 aria-label="About" class="sr-only">About</h2>
+  const aboutText = createHtmlFromTemplate(`<section id="about" class="section section-about container border-lg-bottom p-4"><h2 aria-label="About" class="sr-only">About</h2>
   <div class="row row-cols-md-2 row-cols-lg-3 d-flex flex-column flex-md-row justify-content-center">
   <div class="profile-image col center bg-lg-light align-self-lg-center">
   <img  src="${profileImage}" alt="profile" class="img-fluid img-lg-thumbnail rounded"/>
@@ -21,7 +21,7 @@ function renderAbout() {
   <p class="text-break fw-light fst-italic">In order to improve my skills, I'm currently taking part in the <a href="https://rs.school/" target="_blank" rel="no-referrer" class="link-secondary"><strong>Frontend course at RS School</strong></a>.</p><p class="text-break fw-light fst-italic">My strengths are motivation, <strong>attention to detail</strong> and patience. I'm a&nbsp;<strong>team player</strong> always eager to learn more!</p>
   <p class="fw-light fst-italic mobile-trigger">Thank you for viewing my <strong>portfolio.</strong></p></section></div>
   </div>
-  </div></div>`);
+  </div>`);
   const fragment = new DocumentFragment();
   fragment.append(aboutText);
   mainContainer.append(fragment);

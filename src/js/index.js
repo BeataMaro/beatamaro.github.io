@@ -47,6 +47,7 @@ ScrollTrigger.matchMedia({
         scrub: 1,
         end: '100%',
         pin: true,
+        pinSpacing: false,
       },
     });
     tl.to('.section-about', { opacity: 0 });
