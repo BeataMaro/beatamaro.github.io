@@ -94,6 +94,11 @@ body {
     }
   }
   main {
+    .section-about {
+      .profile-image img {
+        max-width: 13rem;
+      }
+    }
     .section-portfolio {
       .card {
         transition: 0.2s linear;
