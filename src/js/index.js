@@ -31,8 +31,9 @@ ScrollTrigger.matchMedia({
         trigger: '.section-about',
         start: 'center top',
         scrub: 1,
-        end: '100%',
+        end: '90%',
         pin: true,
+        pinSpacing: false,
       },
     });
     tl.to('.section-about', { opacity: 0 }, { y: 200 });
@@ -42,11 +43,10 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-about',
-        // start: 'bottom bottom',
-        start: 'bottom bottom',
+        start: 'center top',
         scrub: 1,
         end: '100%',
-        // pin: true,
+        pin: true,
       },
     });
     tl.to('.section-about', { opacity: 0 });
