@@ -1,5 +1,6 @@
 import { mainContainer } from './createAppStructure';
 import createHtmlFromTemplate from './utils';
+import planningWizardScreen from '../assets/images/planning-wizard-screen.png';
 import selfmaxScreen from '../assets/images/selfmax-screen.png';
 import onlineZooScreen from '../assets/images/online-zoo-screen.png';
 import workshopScreen from '../assets/images/workshop-screen.png';
@@ -7,6 +8,10 @@ import weatherAppScreen from '../assets/images/weather-app-screen.png';
 
 import scssLogo from '../assets/icons/sass.svg';
 import javascriptLogo from '../assets/icons/javascript.svg';
+import angularLogo from '../assets/icons/angular.svg';
+import typeScriptLogo from '../assets/icons/typescript.svg';
+import ngRxLogo from '../assets/icons/ngrx.svg';
+import rxJsLogo from '../assets/icons/rxjs.svg';
 import reactLogo from '../assets/icons/react.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
 import figmaLogo from '../assets/icons/figma-logo.svg';
@@ -37,8 +42,21 @@ function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
-    <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center mt-4">
-     <div class="col d-flex justify-content-center">
+  <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column g-4 justify-content-center align-items-center mt-4">
+  <span aria-label="Current project" class="text-center hl-md mb-4">I'm currently working on......<span>
+
+  <div class="col d-flex justify-content-center p-3">
+  ${createSingleCardTemplate(
+    planningWizardScreen,
+    'Project Management Application',
+    [angularLogo, typeScriptLogo, ngRxLogo, rxJsLogo],
+    'https://github.com/BeataMaro/Project-Management',
+    'https://project-management-app-bm.netlify.app/',
+  )}
+  </div>
+  </div>
+  <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center mt-4">
+    <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     selfmaxScreen,
     'SelfMAX',
@@ -75,6 +93,7 @@ function renderPortfolio() {
   )}
   </div>
   </div>
+  
     </section>`;
   fragment.append(createHtmlFromTemplate(portfolioTemplate));
   mainContainer.append(fragment);
