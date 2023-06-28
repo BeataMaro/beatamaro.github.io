@@ -5,7 +5,7 @@ It provides information about my skills and past work experience.
 
 ### Live Demo
 
-You can view a live demo by visiting this [link](https://project-management-app-bm.netlify.app)
+You can view a live demo by visiting this [link](https://beatamaro-portfolio.netlify.app/)
 
 ### Getting Started
 To get started, run the following command to install the required dependencies:
