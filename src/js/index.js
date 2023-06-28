@@ -1,6 +1,5 @@
 import '../scss/styles.scss';
 import '../index.html';
-import * as bootstrap from 'bootstrap';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import renderNav from './nav-component';
