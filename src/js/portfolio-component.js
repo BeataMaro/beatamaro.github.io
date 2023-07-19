@@ -1,6 +1,7 @@
 import { mainContainer } from './createAppStructure';
 import createHtmlFromTemplate from './utils';
 import planningWizardScreen from '../assets/images/planning-wizard-screen.png';
+import budgetScreen from '../assets/images/budget-screen.png';
 import reactTableScreen from '../assets/images/react-table-screen.png';
 import selfmaxScreen from '../assets/images/selfmax-screen.png';
 import onlineZooScreen from '../assets/images/online-zoo-screen.png';
@@ -18,9 +19,10 @@ import reduxLogo from '../assets/icons/redux.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
 import figmaLogo from '../assets/icons/figma-logo.svg';
 import githubLogo from '../assets/icons/github_icon.png';
+import materialUILogo from '../assets/icons/material-ui.svg';
 
 function createSingleCardTemplate(img, title, technologies, github, url) {
-  const projectTemplate = `<div class="card shadow p-3">
+  const projectTemplate = `<div class="card shadow">
   <a href="${url}" target="_blank" rel="no-referrer"><img src="${img}" class="card-img-top" alt="${title} website screen"></a>
   <div class="card-body">
     <h5 class="card-title fw-bold">${title}</h5>
@@ -46,13 +48,23 @@ function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
-  <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center align-items-center mt-4">
-  <span aria-label="Current project" class="text-center hl-md mb-4">I'm currently working on...</span>
-
-  <div class="col d-flex p-3">
+  <span class="text-center d-block m-auto">I'm currently working on...</span>
+  <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center align-items-center mt-3">
+  <div aria-label="Current projects" class="text-center hl-md">
+  <div class="col d-flex">
+  ${createSingleCardTemplate(
+    budgetScreen,
+    'Expense management application',
+    [reactLogo, materialUILogo ],
+    'https://github.com/BeataMaro/budget-app',
+    'https://github.com/BeataMaro/budget-app',
+  )}
+  </div>
+</div>
+  <div class="col d-flex">
   ${createSingleCardTemplate(
     planningWizardScreen,
-    'Project Management Application',
+    'Project management application',
     [angularLogo, typeScriptLogo, ngRxLogo, rxJsLogo],
     'https://github.com/BeataMaro/Project-Management',
     'https://project-management-app-bm.netlify.app/',
@@ -60,10 +72,10 @@ function renderPortfolio() {
   </div>
   </div>
   <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center mt-4">
-  <div class="col d-flex justify-content-center p-3">
+  <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     reactTableScreen,
-    'Project Management Application',
+    'Unsplash photos viewer',
     [reactLogo, typeScriptLogo, reduxLogo],
     'https://github.com/BeataMaro/react-table',
     'https://react-photos-viewer.netlify.app//',
@@ -81,7 +93,7 @@ function renderPortfolio() {
   <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     onlineZooScreen,
-    'Online Zoo',
+    'Online zoo',
     [javascriptLogo, scssLogo, figmaLogo],
     'https://github.com/BeataMaro/online-zoo/tree/gh-pages/pages/main',
     'https://beatamaro.github.io/online-zoo/pages/main/',
@@ -99,7 +111,7 @@ function renderPortfolio() {
    <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     weatherAppScreen,
-    'Weather Application',
+    'Weather application',
     [reactLogo],
     'https://github.com/BeataMaro/Weather-app',
     'https://beatamaro.github.io/Weather-app/',
