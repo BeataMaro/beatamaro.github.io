@@ -55,7 +55,7 @@ function renderPortfolio() {
   ${createSingleCardTemplate(
     budgetScreen,
     'Expense management application',
-    [reactLogo, materialUILogo ],
+    [reactLogo, materialUILogo],
     'https://github.com/BeataMaro/budget-app',
     'https://github.com/BeataMaro/budget-app',
   )}
