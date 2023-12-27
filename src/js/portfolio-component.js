@@ -18,8 +18,8 @@ import reactLogo from '../assets/icons/react.svg';
 import reduxLogo from '../assets/icons/redux.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
 import figmaLogo from '../assets/icons/figma-logo.svg';
-import githubLogo from '../assets/icons/github_icon.png';
 import materialUILogo from '../assets/icons/material-ui.svg';
+import githubLogo from '../assets/icons/github-svgrepo-com.svg';
 
 function createSingleCardTemplate(img, title, technologies, github, url) {
   const projectTemplate = `<div class="card shadow">
@@ -30,9 +30,8 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
   <ul class="list-group list-group-flush">
   <li class="list-group-item">Technologies: 
   <div class="d-flex">
-  ${technologies.map(
-    (techimg) => `<img src="${techimg}" alt="technology logo" class="img-fluid tech-icon me-2">`,
-  )}
+
+  ${technologies.map((techimg) => `<img src="${techimg}" alt="technology logo" class="img-fluid tech-icon me-4 align-items-center"/>`).join('')}
   </div>
   </li>
   </ul>

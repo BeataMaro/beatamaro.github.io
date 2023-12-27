@@ -1,8 +1,8 @@
 import { mainContainer } from './createAppStructure';
 import createHtmlFromTemplate from './utils';
-import emailIcon from '../assets/icons/ftmail-generic.svg';
-import mobileIcon from '../assets/icons/ftyahoo-mobile.svg';
-import linkedInIcon from '../assets/icons/linkedin-icon.png';
+import emailIcon from '../assets/icons/envelope.svg';
+import mobileIcon from '../assets/icons/phone-call.svg';
+import linkedInIcon from '../assets/icons/linkedin.svg';
 
 function renderContact() {
   const fragment = new DocumentFragment();

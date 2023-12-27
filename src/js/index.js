@@ -21,7 +21,7 @@ renderContact();
 renderFooter();
 
 // animations
-ScrollTrigger.saveStyles('.section-about');
+// ScrollTrigger.saveStyles('.section-about');
 ScrollTrigger.matchMedia({
   // desktop
   '(min-width: 800px)': function () {
@@ -42,10 +42,10 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section-about',
-        start: 'center top',
-        scrub: 1,
-        end: '100%',
-        pin: true,
+        start: 'top',
+        scrub: true,
+        end: '+=2500',
+        // pin: true,
         pinSpacing: false,
       },
     });
@@ -97,6 +97,6 @@ async function animatedElements(elements, triggerEl) {
 
 animatedNav();
 scaleElement('.section-hero');
-scaleElement('.profile-image');
+// scaleElement('.profile-image');
 animatedElements('.skill-logo', '.section-skills');
 animatedElements('.card', '.section-portfolio');
