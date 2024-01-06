@@ -3,24 +3,24 @@ import { headerContainer } from './createAppStructure';
 const BODY = document.body;
 
 function closeNavbar(e) {
-  const hambBtn = document.querySelector('.navbar-toggler');
   const navbar = document.querySelector('.navbar-collapse');
   if (e.target.closest('.navbar')) return;
   BODY.classList.remove('darkened-body');
-  hambBtn.classList.remove('collapsed');
   navbar.classList.remove('show');
 }
 
-BODY.addEventListener('click', closeNavbar);
-
-function darkenedBody() {
-  const hambBtn = document.querySelector('.navbar-toggler');
-  if (!hambBtn.classList.contains('collapsed')) {
-    BODY.classList.add('darkened-body');
-  } else {
+function openCloseNavbar() {
+  const navbar = document.querySelector('.navbar-collapse');
+  if (BODY.classList.contains('darkened-body')) {
     BODY.classList.remove('darkened-body');
+    navbar.classList.remove('show');
+  } else {
+    BODY.classList.add('darkened-body');
+    navbar.classList.add('show');
   }
 }
+
+BODY.addEventListener('click', closeNavbar);
 
 function highlightActiveNavItem(e) {
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
@@ -55,7 +55,7 @@ function renderNav() {
   hamburgerBtnIcon.className = 'navbar-toggler-icon';
   hamburgerBtn.appendChild(hamburgerBtnIcon);
 
-  hamburgerBtn.addEventListener('click', darkenedBody);
+  hamburgerBtn.addEventListener('click', openCloseNavbar);
 
   const collapseNavbar = document.createElement('div');
   collapseNavbar.classList.add(
@@ -100,14 +100,11 @@ function renderNav() {
     navListContactLink,
   );
 
+  const navbar = document.querySelector('.navbar-nav');
+  navbar.addEventListener('click', openCloseNavbar);
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
   [...navLinks].map((item) => {
     item.classList.add('nav-item', 'nav-link');
-    item.addEventListener('click', () => {
-      const navbar = document.querySelector('.navbar-collapse');
-      navbar.classList.remove('show');
-      BODY.classList.remove('darkened-body');
-    });
     item.addEventListener('click', (e) => highlightActiveNavItem(e));
     return null;
   });

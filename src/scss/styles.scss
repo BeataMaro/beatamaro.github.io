@@ -8,7 +8,7 @@ $honey: #ecbf1b;
 
 html {
   scroll-behavior: smooth;
-  // scroll-padding-top: 3rem;
+  scroll-padding-top: 3rem;
 }
 
 * {
@@ -31,7 +31,6 @@ body {
   font-family: 'Orbitron', sans-serif;
   overflow-x: clip;
   background-color: $greyBrown;
-  // padding-top: 7rem;
 
   &.darkened-body {
     body {
@@ -56,8 +55,12 @@ body {
     display: none;
   }
   .section {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding: 4rem 1rem;
+
+    @media (min-width: 1200px) {
+      margin: 4rem auto;
+      padding: 4rem 0;
+    }
   }
   .sr-only {
     position: absolute;
@@ -71,6 +74,7 @@ body {
   header {
     .section-hero {
       background-color: $greyBrown;
+      padding: 0;
       .hero-image-xxl {
         height: 90vh;
       }
@@ -110,8 +114,28 @@ body {
   }
   main {
     .section-about {
+      p {
+        line-height: 1.8;
+      }
       .profile-image img {
         max-width: 13rem;
+      }
+    }
+    .section-skills {
+      background-color: #fff;
+      position: relative;
+
+      h2 {
+        position: relative;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: 100vw;
+        top: 0;
+        bottom: 0;
       }
     }
     .section-portfolio {
