@@ -1,10 +1,6 @@
 import createHtmlFromTemplate from './utils';
 import { mainContainer } from './createAppStructure';
-// import profileImage from '../assets/images/LinkedInd-profile-photo-b&w.jpg';
 
-// <div class="profile-image col center bg-lg-light align-self-lg-center">
-//  <img  src="${profileImage}" alt="profile" class="img-fluid img-lg-thumbnail rounded"/>
-// </div>
 function renderAbout() {
   const aboutText = createHtmlFromTemplate(`<section id="about" class="section section-about container border-lg-bottom"><h2 aria-label="About" class="sr-only">About</h2>
   <div class="row row-cols-md-2 row-cols-lg-2 d-flex flex-column flex-md-row justify-content-around">
