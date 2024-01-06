@@ -24,8 +24,11 @@ BODY.addEventListener('click', closeNavbar);
 
 function highlightActiveNavItem(e) {
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
+  const navbar = document.querySelector('.navbar-collapse');
   navLinks.forEach((link) => link.classList.remove('active-section'));
   e.target.classList.add('active-section');
+  BODY.classList.remove('darkened-body');
+  navbar.classList.remove('show');
 }
 
 function renderNav() {
@@ -100,7 +103,7 @@ function renderNav() {
     navListContactLink,
   );
 
-  const navbar = document.querySelector('.navbar-nav');
+  const navbar = document.querySelector('.navbar-toggler');
   navbar.addEventListener('click', openCloseNavbar);
   const navLinks = document.querySelectorAll('div.navbar-nav > a');
   [...navLinks].map((item) => {
