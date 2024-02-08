@@ -1,24 +1,15 @@
 import { mainContainer } from './createAppStructure';
 import createHtmlFromTemplate from './utils';
-import planningWizardScreen from '../assets/images/planning-wizard-screen.png';
 import budgetScreen from '../assets/images/budget-screen.png';
 import reactTableScreen from '../assets/images/react-table-screen.png';
 import selfmaxScreen from '../assets/images/selfmax-screen.png';
-import onlineZooScreen from '../assets/images/online-zoo-screen.png';
 import workshopScreen from '../assets/images/workshop-screen.png';
 import weatherAppScreen from '../assets/images/weather-app-screen.png';
-
-import scssLogo from '../assets/icons/sass.svg';
-import javascriptLogo from '../assets/icons/javascript.svg';
-import angularLogo from '../assets/icons/angular.svg';
 import typeScriptLogo from '../assets/icons/typescript.svg';
 import viteLogo from '../assets/icons/vite-logo.svg';
-import ngRxLogo from '../assets/icons/ngrx.svg';
-import rxJsLogo from '../assets/icons/rxjs.svg';
 import reactLogo from '../assets/icons/react.svg';
 import reduxLogo from '../assets/icons/redux.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
-import figmaLogo from '../assets/icons/figma-logo.svg';
 import materialUILogo from '../assets/icons/material-ui.svg';
 import githubLogo from '../assets/icons/github-svgrepo-com.svg';
 
@@ -50,7 +41,7 @@ function renderPortfolio() {
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
   <span class="text-center d-block m-auto">I'm currently working on...</span>
   <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center align-items-center mt-3">
-  <div aria-label="Current projects" class="text-center hl-md">
+  <div aria-label="Current projects" class="hl-md">
   <div class="col d-flex">
   ${createSingleCardTemplate(
     budgetScreen,
@@ -60,25 +51,17 @@ function renderPortfolio() {
     'https://smart-piggy-bank.netlify.app/',
   )}
   </div>
-</div>
-  <div class="col d-flex">
-  ${createSingleCardTemplate(
-    planningWizardScreen,
-    'Project management application',
-    [angularLogo, typeScriptLogo, ngRxLogo, rxJsLogo],
-    'https://github.com/BeataMaro/Project-Management',
-    'https://project-management-app-bm.netlify.app/',
-  )}
   </div>
   </div>
+  <span class="text-center d-block mt-5">My projects</span>
   <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center mt-4">
   <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     reactTableScreen,
     'Unsplash photos viewer',
-    [reactLogo, typeScriptLogo, reduxLogo],
+    [reactLogo, typeScriptLogo, viteLogo, reduxLogo],
     'https://github.com/BeataMaro/react-table',
-    'https://react-photos-viewer.netlify.app//',
+    'https://main--react-photos-viewer.netlify.app/',
   )}
   </div>
     <div class="col d-flex justify-content-center">
@@ -90,15 +73,6 @@ function renderPortfolio() {
     'http://selfmax.pl',
   )}
   </div>
-  <div class="col d-flex justify-content-center">
-  ${createSingleCardTemplate(
-    onlineZooScreen,
-    'Online zoo',
-    [javascriptLogo, scssLogo, figmaLogo],
-    'https://github.com/BeataMaro/online-zoo/tree/gh-pages/pages/main',
-    'https://beatamaro.github.io/online-zoo/pages/main/',
-  )}
-</div>
 <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(
     workshopScreen,

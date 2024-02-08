@@ -129,6 +129,13 @@ body {
         position: relative;
       }
 
+      .tech-logo {
+        
+        @media (min-width: 768px) {
+          width: 45%;
+        }
+      }
+
       &::before {
         content: '';
         position: absolute;
