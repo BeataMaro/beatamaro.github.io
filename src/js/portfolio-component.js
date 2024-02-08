@@ -12,6 +12,7 @@ import scssLogo from '../assets/icons/sass.svg';
 import javascriptLogo from '../assets/icons/javascript.svg';
 import angularLogo from '../assets/icons/angular.svg';
 import typeScriptLogo from '../assets/icons/typescript.svg';
+import viteLogo from '../assets/icons/vite-logo.svg';
 import ngRxLogo from '../assets/icons/ngrx.svg';
 import rxJsLogo from '../assets/icons/rxjs.svg';
 import reactLogo from '../assets/icons/react.svg';
@@ -54,9 +55,9 @@ function renderPortfolio() {
   ${createSingleCardTemplate(
     budgetScreen,
     'Expense management application',
-    [reactLogo, materialUILogo],
+    [reactLogo, typeScriptLogo, viteLogo, materialUILogo],
     'https://github.com/BeataMaro/budget-app',
-    'https://github.com/BeataMaro/budget-app',
+    'https://smart-piggy-bank.netlify.app/',
   )}
   </div>
 </div>
