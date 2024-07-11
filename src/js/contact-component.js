@@ -6,19 +6,19 @@ import linkedInIcon from '../assets/icons/linkedin.svg';
 
 function renderContact() {
   const fragment = new DocumentFragment();
-  const contactTemplate = `<section id="contact" class="section-contact container-fluid p-5 mt-4">
-  <h2 aria-label="Contact" class="text-center fw-bold hl-lg">Contact</h2>
-  <div class="row row-cols-lg-3 g-4 p-4 flex-column flex-lg-row d-flex justify-content-center">
+  const contactTemplate = `<section id="contact" class="section section-contact container-fluid p-5 mt-4">
+  <div class="row row-cols-md-3 g-4 p-4 flex-column flex-md-row">
   <div class="col flex-column center">
-  <img src="${emailIcon}" alt="envelope icon" class="img-fluid contact-icon me-3"/>
+  <img src="${emailIcon}" alt="envelope icon" class="img-fluid contact-icon me-lg-3 mb-1"/>
   <strong class="p-2">maro.beata@gmail.com</strong>
   </div>
   <div class="col flex-column center">
-  <img src="${mobileIcon}" alt="mobile phone icon" class="img-fluid contact-icon me-3 mb-2" />
+  <img src="${mobileIcon}" alt="mobile phone icon" class="img-fluid contact-icon me-lg-3 mb-2" />
   <strong class="p-2">+48 511 909 309</strong></div>
   <div class="col text-center">
-  <a href="https://www.linkedin.com/in/beata-maro-junior-web-developer/" target="_blank" rel="no-referrer">
-  <img src="${linkedInIcon}" alt="LinkedIn icon" class="img-fluid contact-icon linkedin-icon" /></a></div></div></section>`;
+  <a href="https://www.linkedin.com/in/beata-maro" target="_blank" rel="no-referrer" class="flex-column center">
+  <img src="${linkedInIcon}" alt="LinkedIn icon" class="img-fluid contact-icon linkedin-icon" class="mb-1" /><strong class="p-2">linkedin.com/in/beata-maro</strong>
+ </a></div></div></section>`;
   fragment.append(createHtmlFromTemplate(contactTemplate));
   mainContainer.append(fragment);
 }

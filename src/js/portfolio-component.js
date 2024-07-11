@@ -17,18 +17,19 @@ function createSingleCardTemplate(img, title, technologies, github, url) {
   const projectTemplate = `<div class="card shadow">
   <a href="${url}" target="_blank" rel="no-referrer"><img src="${img}" class="card-img-top" alt="${title} website screen"></a>
   <div class="card-body">
-    <h5 class="card-title fw-bold">${title}</h5>
+    <h5 class="card-title fw-bold project_title_${title.split(' ').shift().toLowerCase()}">${title}</h5>
   </div>
   <ul class="list-group list-group-flush">
-  <li class="list-group-item">Technologies: 
+  <li class="list-group-item">
+  <p class="technologies"></p>
   <div class="d-flex">
 
   ${technologies.map((techimg) => `<img src="${techimg}" alt="technology logo" class="img-fluid tech-icon me-4 align-items-center"/>`).join('')}
   </div>
   </li>
   </ul>
-  <div class="card-body d-flex align-items-center justify-content-between">
-  <strong> Github repository:</strong>
+  <div class="card-body center justify-content-between">
+  <strong class="github_repo"></strong>
     <a href="${github}" class="card-link link-secondary" target="_blank" rel="no-referrer"><img src="${githubLogo}" alt="Github logo" class="img-fluid tech-icon"></a>
   </div>
   </div>`;
@@ -39,7 +40,7 @@ function renderPortfolio() {
   const fragment = new DocumentFragment();
   const portfolioTemplate = `<section id="portfolio" class="section section-portfolio container">
   <h2 aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4">Portfolio</h2>
-  <span class="text-center d-block m-auto">I'm currently working on...</span>
+  <span id="currently" class="text-center d-block m-auto">I'm currently working on...</span>
   <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center align-items-center mt-3">
   <div aria-label="Current projects" class="hl-md">
   <div class="col d-flex">
@@ -53,7 +54,7 @@ function renderPortfolio() {
   </div>
   </div>
   </div>
-  <span class="text-center d-block mt-5">My projects</span>
+  <span class="text-center d-block mt-5 my_projects"></span>
   <div class="row row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center mt-4">
   <div class="col d-flex justify-content-center">
   ${createSingleCardTemplate(

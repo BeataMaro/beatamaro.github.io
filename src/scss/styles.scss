@@ -2,9 +2,10 @@
 @import 'bootstrap';
 
 // variables
-$darkGrey: #2a3140;
+$darkNavy: #2a3140;
 $greyBrown: #cccbc5;
-$honey: #ecbf1b;
+$darkGrey: #777d8d;
+$seaColor: #00afa0;
 
 html {
   scroll-behavior: smooth;
@@ -18,13 +19,48 @@ html {
 }
 
 ::selection {
-  color: $honey;
+  color: $seaColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: .2s ease;
+
+  &:hover {
+    color: $seaColor;
+  }
+}
+
+strong {
+  font-weight: 400;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-background {
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../assets/images/katsia-jazwinska-cTA8m7VwejE-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: blur(.3rem);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &_hero {
+    &::before {
+      background-image: url('../assets/images/domenico-loia-hGV2TfOh0ns-unsplash.jpg');
+    }
+  }
 }
 
 body {
@@ -56,6 +92,7 @@ body {
   }
   .section {
     padding: 4rem 1rem;
+    position: relative;
 
     @media (min-width: 1200px) {
       margin: 4rem auto;
@@ -75,23 +112,42 @@ body {
     .section-hero {
       background-color: $greyBrown;
       padding: 0;
-      .hero-image-xxl {
-        height: 90vh;
-      }
-      .hero_image {
-        width: 100%;
-        object-fit: cover;
+      height: 100vh;
+
+      &_text {
+        border-radius: 1.2rem;
+        background: rgba(255, 255, 255, 0.5);
+        font-size: 1rem;
+
+        @media (min-width: 768px) {
+          font-size: inherit;
+        }
       }
     }
     nav {
       z-index: 100;
+
+      select {
+        padding: 1rem;
+        border-radius: 1.2rem;
+        border: none;
+        align-self: start;
+
+        @media (min-width: 768px) {
+          margin-left: 1rem;
+        }
+
+        &:active {
+          border: 1px solid $darkGrey;
+        }
+      }
 
       .navbar-collapse {
         flex-grow: 0 !important;
         flex-basis: 90%;
         border-radius: 1.2rem 0 0 2rem;
 
-        @media (min-width: 797px) {
+        @media (min-width: 768px) {
           flex-basis: 100%;
           border-radius: 1.2rem;
         }
@@ -100,11 +156,10 @@ body {
       .nav-link {
         transition: 0.2s ease;
         &:hover {
-          color: $honey;
-          text-shadow: 1px 1px rgba($honey, 0.4);
+          color: $seaColor;
         }
         &.active-section {
-          color: $honey;
+          color: $seaColor;
         }
       }
     }
@@ -117,32 +172,17 @@ body {
       p {
         line-height: 1.8;
       }
-      .profile-image img {
-        max-width: 13rem;
-      }
     }
     .section-skills {
       background-color: #fff;
       position: relative;
 
-      h2 {
-        position: relative;
-      }
-
       .tech-logo {
+        width: 80%;
         
         @media (min-width: 768px) {
           width: 45%;
         }
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        background-color: #fff;
-        width: 100vw;
-        top: 0;
-        bottom: 0;
       }
     }
     .section-portfolio {
@@ -158,20 +198,16 @@ body {
       }
     }
     .section-contact {
-      background-color: $darkGrey;
-      color: $greyBrown;
+      color: $darkNavy;
 
       .contact-icon {
         width: 4rem;
-      }
-      .linkedin-icon {
-        width: 5rem;
       }
     }
   }
 
   .footer-container {
-    background-color: $greyBrown;
+    background-color: $darkGrey;
 
     .footer-icon {
       width: 6rem;

@@ -1,5 +1,6 @@
 import '../scss/styles.scss';
 import '../index.html';
+import '../app';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import renderNav from './nav-component';
@@ -97,6 +98,5 @@ async function animatedElements(elements, triggerEl) {
 
 animatedNav();
 scaleElement('.section-hero');
-// scaleElement('.profile-image');
 animatedElements('.skill-logo', '.section-skills');
 animatedElements('.card', '.section-portfolio');

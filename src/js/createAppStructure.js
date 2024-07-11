@@ -6,9 +6,8 @@ export const bodyOverlay = document.createElement('div');
 bodyOverlay.className = 'overlay';
 
 mainContainer.classList.add(
-  'd-flex',
+  'center',
   'flex-column',
-  'justify-content-center',
   'flex-wrap',
 );
 footerContainer.id = 'footer';

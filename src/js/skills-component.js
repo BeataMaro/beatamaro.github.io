@@ -10,10 +10,11 @@ import reactLogo from '../assets/icons/react.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
 import figmaLogo from '../assets/icons/figma-logo.svg';
 import gitLogo from '../assets/icons/Git-Logo-Black.svg';
-import adobeXDLogo from '../assets/icons/Adobe_XD-icon.png';
+import adobeXDLogo from '../assets/icons/Adobe_XD-icon.svg';
+import istqbLogo from '../assets/icons/ISTQB.svg';
 
 function createSkillLogoTemplate(logo) {
-  const template = `<div class="col center shadow-sm bg-light m-1 skill-logo">
+  const template = `<div class="col center skill-logo">
   <img src="${logo}" alt="Tech logo" class="img-fluid tech-logo py-3"/>
   </div>`;
   return template;
@@ -22,19 +23,20 @@ function createSkillLogoTemplate(logo) {
 function renderSkills() {
   const fragment = new DocumentFragment();
   const skillsTemplate = `<section id="skills" class="section section-skills border-lg-bottom">
-  <h2 aria-label="skills" class="text-center fw-bold mb-4">My skills</h2>
-  <div class="row row-cols-4 row-cols-lg-6 justify-content-center mt-4">
- ${createSkillLogoTemplate(cssLogo)}
- ${createSkillLogoTemplate(htmlLogo)}
- ${createSkillLogoTemplate(scssLogo)}
- ${createSkillLogoTemplate(javascriptLogo)}
- ${createSkillLogoTemplate(angularLogo)}
- ${createSkillLogoTemplate(typeScriptLogo)}
- ${createSkillLogoTemplate(reactLogo)}
- ${createSkillLogoTemplate(gatsbyLogo)}
- ${createSkillLogoTemplate(figmaLogo)}
- ${createSkillLogoTemplate(adobeXDLogo)}
- ${createSkillLogoTemplate(gitLogo)}
+  <h2 id="my_skills" aria-label="Portfolio" class="fw-bold text-center hl-lg mb-4"></h2>
+  <div class="row row-cols-4 row-cols-lg-6 center mt-4">
+      ${createSkillLogoTemplate(cssLogo)}
+      ${createSkillLogoTemplate(htmlLogo)}
+      ${createSkillLogoTemplate(scssLogo)}
+      ${createSkillLogoTemplate(javascriptLogo)}
+      ${createSkillLogoTemplate(angularLogo)}
+      ${createSkillLogoTemplate(typeScriptLogo)}
+      ${createSkillLogoTemplate(reactLogo)}
+      ${createSkillLogoTemplate(gatsbyLogo)}
+      ${createSkillLogoTemplate(figmaLogo)}
+      ${createSkillLogoTemplate(adobeXDLogo)}
+      ${createSkillLogoTemplate(gitLogo)}
+      ${createSkillLogoTemplate(istqbLogo)}
   </div>
   </section>`;
   fragment.append(createHtmlFromTemplate(skillsTemplate));

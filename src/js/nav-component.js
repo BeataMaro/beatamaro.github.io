@@ -73,13 +73,15 @@ function renderNav() {
 
   const navbarNav = document.createElement('div');
   navbarNav.classList.add('navbar-nav');
+  navbarNav.classList.add('center');
 
   const navListAboutLink = document.createElement('a');
   navListAboutLink.href = '#about';
-  navListAboutLink.textContent = 'About';
+  navListAboutLink.id = 'nav_about';
   const navListSkillsLink = document.createElement('a');
   navListSkillsLink.href = '#skills';
   navListSkillsLink.textContent = 'Skills';
+  navListSkillsLink.id = 'nav_skills';
 
   const navListPortfolioLink = document.createElement('a');
   navListPortfolioLink.href = '#portfolio';
@@ -87,7 +89,18 @@ function renderNav() {
 
   const navListContactLink = document.createElement('a');
   navListContactLink.href = '#contact';
-  navListContactLink.textContent = 'Contact';
+  navListContactLink.id = 'nav_contact';
+
+  const languageVersionSelect = document.createElement('select');
+  languageVersionSelect.id = 'language-select';
+  const languagePLOption = document.createElement('option');
+  languagePLOption.value = 'pl';
+  languagePLOption.textContent = 'PL';
+  const languageENOption = document.createElement('option');
+  languageENOption.value = 'en';
+  languageENOption.textContent = 'EN';
+  languageVersionSelect.append(languagePLOption);
+  languageVersionSelect.append(languageENOption);
 
   fragment.append(navigation);
   headerContainer.appendChild(fragment);
@@ -101,6 +114,7 @@ function renderNav() {
     navListPortfolioLink,
     navListSkillsLink,
     navListContactLink,
+    languageVersionSelect,
   );
 
   const navbar = document.querySelector('.navbar-toggler');
