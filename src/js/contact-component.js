@@ -17,7 +17,7 @@ function renderContact() {
   <strong class="p-2">+48 511 909 309</strong></div>
   <div class="col text-center">
   <a href="https://www.linkedin.com/in/beata-maro" target="_blank" rel="no-referrer" class="flex-column center">
-  <img src="${linkedInIcon}" alt="LinkedIn icon" class="img-fluid contact-icon linkedin-icon" class="mb-1" /><strong class="p-2">linkedin.com/in/beata-maro</strong>
+  <img src="${linkedInIcon}" alt="LinkedIn icon" class="img-fluid contact-icon linkedin-icon" class="mb-1" /><strong class="p-2 text-nowrap">linkedin.com/in/beata-maro</strong>
  </a></div></div></section>`;
   fragment.append(createHtmlFromTemplate(contactTemplate));
   mainContainer.append(fragment);
