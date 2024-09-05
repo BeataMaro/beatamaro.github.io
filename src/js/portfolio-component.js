@@ -5,6 +5,7 @@ import reactTableScreen from '../assets/images/react-table-screen.png';
 import selfmaxScreen from '../assets/images/selfmax-screen.png';
 import workshopScreen from '../assets/images/workshop-screen.png';
 import weatherAppScreen from '../assets/images/weather-app-screen.png';
+import tglineScreen from '../assets/images/tgline-screen.png';
 import typeScriptLogo from '../assets/icons/typescript.svg';
 import viteLogo from '../assets/icons/vite-logo.svg';
 import reactLogo from '../assets/icons/react.svg';
@@ -12,6 +13,8 @@ import reduxLogo from '../assets/icons/redux.svg';
 import gatsbyLogo from '../assets/icons/gatsby.svg';
 import materialUILogo from '../assets/icons/material-ui.svg';
 import githubLogo from '../assets/icons/github-svgrepo-com.svg';
+import reactBootstrapLogo from '../assets/icons/React Bootstrap.svg';
+import decapCMSLogo from '../assets/icons/decap-cms.svg';
 
 function createSingleCardTemplate(img, title, technologies, github, url) {
   const projectTemplate = `<div class="card shadow">
@@ -43,6 +46,15 @@ function renderPortfolio() {
   <span id="currently" class="text-center d-block m-auto">I'm currently working on...</span>
   <div class="row row-cols-sm-1 row-cols-md-2 d-flex flex-column flex-md-row g-4 justify-content-center align-items-center mt-3">
   <div aria-label="Current projects" class="hl-md">
+  <div class="col d-flex mb-5">
+  ${createSingleCardTemplate(
+    tglineScreen,
+    'TGLine - commercial pavilions website',
+    [gatsbyLogo, decapCMSLogo, reactBootstrapLogo],
+    'https://github.com/BeataMaro/TGLine',
+    'https://my-extraspace.netlify.app/',
+  )}
+  </div>
   <div class="col d-flex">
   ${createSingleCardTemplate(
     budgetScreen,
